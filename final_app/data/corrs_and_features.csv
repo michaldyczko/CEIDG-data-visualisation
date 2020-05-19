@@ -1,0 +1,494 @@
+,correlations,importance
+YearOfStartingOfTheBusiness,0.0,0.0
+MonthOfStartingOfTheBusiness,-0.0829667483854112,1.7138203284755342
+NoOfAdditionalPlaceOfTheBusiness,0.10440408904778277,3.105298972541132
+NoOfLicences,0.13947483868047908,10.155583326063873
+NoOfUniquePKDSections,0.19647896910058432,0.498153245475369
+NoOfUniquePKDDivsions,0.18123504075301428,22.08574977448411
+NoOfUniquePKDGroups,0.14708444595468348,0.1440963222035521
+NoOfUniquePKDClasses,0.11430263250976225,0.48777742170915034
+MainAndCorrespondenceAreTheSameEncoded,0.005911057717408524,4.256313601057515
+IsPhoneNoEncoded,0.13001881486660094,7.312743519079603
+IsEmailEncoded,0.021912033439210638,0.0779559207761808
+IsWWWEncoded,0.06799623842962622,0.035234155449293564
+HasLicencesEncoded,0.1906433294366895,9.000505033583144
+HasPolishCitizenshipEncoded,0.09189898606155715,1.5773695137722765
+ShareholderInOtherCompaniesEncoded,0.1533210411642759,8.564792033967057
+SexEncoded,-0.06029006361455605,1.1501550644253977
+MainAddressPopulation,0.054463555018290664,0.6039596631255836
+MainAddressIncomes,0.049190356745123086,1.0053489315444248
+MainAddressIncomesPC,0.02456312490908378,0.5579435622814503
+MainAddressVoivodeshipFromTERCVerbose_DOLNOŚLĄSKIE,0.0032830272953486526,0.01614043238592934
+MainAddressVoivodeshipFromTERCVerbose_KUJAWSKO-POMORSKIE,-0.023182760752160823,0.026334272145364445
+MainAddressVoivodeshipFromTERCVerbose_LUBELSKIE,-0.0005393514235233808,0.018048016301044002
+MainAddressVoivodeshipFromTERCVerbose_LUBUSKIE,-0.014420641460726632,0.02086868656237706
+MainAddressVoivodeshipFromTERCVerbose_MAZOWIECKIE,0.056968086558257,0.11943036348317057
+MainAddressVoivodeshipFromTERCVerbose_MAŁOPOLSKIE,0.014604604895269602,0.02216368940434982
+MainAddressVoivodeshipFromTERCVerbose_OPOLSKIE,0.004568646030600851,0.010175275131600362
+MainAddressVoivodeshipFromTERCVerbose_PODKARPACKIE,0.0013313695947062612,0.011270603772325864
+MainAddressVoivodeshipFromTERCVerbose_PODLASKIE,0.0045799958956002145,0.011723446860111484
+MainAddressVoivodeshipFromTERCVerbose_POMORSKIE,0.0002826345587821779,0.04471138000369923
+MainAddressVoivodeshipFromTERCVerbose_WARMIŃSKO-MAZURSKIE,-0.020511609914236055,0.019390288580550575
+MainAddressVoivodeshipFromTERCVerbose_WIELKOPOLSKIE,0.019443576324303945,0.020218848288244773
+MainAddressVoivodeshipFromTERCVerbose_ZACHODNIOPOMORSKIE,-0.020203171939543005,0.02801361934859438
+MainAddressVoivodeshipFromTERCVerbose_empty,-0.14424529837082772,1.6529068781134957
+MainAddressVoivodeshipFromTERCVerbose_ŁÓDZKIE,0.003584342613726319,0.03210933454866413
+MainAddressVoivodeshipFromTERCVerbose_ŚLĄSKIE,0.012840817358655684,0.03345463721125986
+MainAddressVoivodeshipFromTERCVerbose_ŚWIĘTOKRZYSKIE,-0.004571542439892439,0.030974798903409147
+MainAddressCommuneTypeFromTERCVerbose_delegatura,0.024176074030187275,0.01822540984412523
+MainAddressCommuneTypeFromTERCVerbose_dzielnica,0.04151633301859,0.027662372873805664
+MainAddressCommuneTypeFromTERCVerbose_empty,-0.1485591684312172,8.708591967595664
+MainAddressCommuneTypeFromTERCVerbose_gmina miejska,-0.004783772218916234,0.028244048419162854
+"MainAddressCommuneTypeFromTERCVerbose_gmina miejska, miasto stołeczne",0.04203027750138928,0.0027658363660747437
+MainAddressCommuneTypeFromTERCVerbose_gmina miejsko-wiejska,-0.007578054566804388,0.005830492929877692
+MainAddressCommuneTypeFromTERCVerbose_gmina wiejska,0.014817303118352929,0.027843549798378105
+MainAddressCommuneTypeFromTERCVerbose_miasto,-0.011730303911794533,0.012082774560501114
+MainAddressCommuneTypeFromTERCVerbose_obszar wiejski,0.017797745180528075,0.012023319536657544
+PKDMainClassName_Activities of amusement parks and theme parks,-0.005026864584236451,2.246473644812663e-05
+PKDMainClassName_Activities of call centres,-0.016760452418735847,0.012342470868307979
+PKDMainClassName_Activities of collection agencies and credit bureaus,-0.005233677312284114,0.0
+PKDMainClassName_Activities of head office and holding companies,-0.0043403441118286465,0.0
+PKDMainClassName_Activities of insurance agents and brokers,-0.04767465685613079,0.02130123746897735
+PKDMainClassName_Activities of other membership organisations not elsewhere classified,-0.0020238674806866757,0.0
+PKDMainClassName_Activities of religious organisations,-0.0003153447540252101,0.0
+PKDMainClassName_Activities of sports clubs,-0.004913348390931116,0.0
+PKDMainClassName_Administration of financial markets,-0.0036362265176679343,0.0
+PKDMainClassName_Advertising agencies,0.01404406263889409,0.00941289143634341
+PKDMainClassName_Agents involved in the sale of a variety of goods,-0.00277339785453754,0.0023872364946282286
+PKDMainClassName_Agents involved in the sale of agricultural raw materials,-0.00047253392436024934,0.00012001691166479645
+PKDMainClassName_Agents involved in the sale of food,-0.013234766243152419,0.0011090019416357857
+PKDMainClassName_Agents involved in the sale of fuels,0.005797381402820045,0.012488373420480977
+PKDMainClassName_Agents involved in the sale of furniture,-0.00278508813704016,0.0008904559592555157
+PKDMainClassName_Agents involved in the sale of machinery,0.007837947610215053,0.004193545619142259
+PKDMainClassName_Agents involved in the sale of textiles,-0.0036031252794669743,0.0015923112724759542
+PKDMainClassName_Agents involved in the sale of timber and building materials,0.0033258868610408026,0.001654041800686797
+PKDMainClassName_Agents specialised in the sale of other particular products,-0.003962748798944581,0.0027123155953760816
+PKDMainClassName_Aluminium production,0.0023875443997021435,0.0
+PKDMainClassName_Architectural activities,0.03471065029569734,0.010568839390379855
+PKDMainClassName_Beverage serving activities,-0.021568798325903672,0.05103208292691172
+PKDMainClassName_Binding and related services,0.0006381460722499933,0.0005287599660679422
+PKDMainClassName_Book publishing,0.0001269226354061209,0.00032442093062778204
+PKDMainClassName_Botanical and zoological gardens and nature reserves activities,0.003432438717358261,0.0
+PKDMainClassName_Building of pleasure and sporting boats,-0.00309968402740367,0.0
+PKDMainClassName_Business and other management consultancy activities,0.035572980483821647,0.01400566965186871
+PKDMainClassName_Buying and selling of own real estate,0.009289869064781218,0.010034929524736494
+PKDMainClassName_Cargo handling,-0.004754802067114608,0.0017385139175736806
+PKDMainClassName_Casting of iron,0.003025240837828376,1.549776248864367e-05
+PKDMainClassName_Casting of light metals,0.003129198568908554,0.0
+PKDMainClassName_Casting of other non-ferrous metals,0.000826485333924774,0.0
+PKDMainClassName_Child day-care activities,-0.007095596753285573,0.011526666048886771
+PKDMainClassName_Cold drawing of bars,-0.0014246816831579823,0.0
+PKDMainClassName_Cold rolling of narrow strip,0.0006477069481307799,0.0
+PKDMainClassName_Collection of hazardous waste,0.0012738483113631269,0.005223173942789655
+PKDMainClassName_Collection of non-hazardous waste,0.0011900616913782477,0.029474311818008175
+PKDMainClassName_Cultural education,0.0037528359111678295,0.0017115465809927023
+PKDMainClassName_Cutting,0.00040367820191174094,0.0004532432036173313
+PKDMainClassName_Data processing,0.0012988846478809576,0.0026997861708956275
+PKDMainClassName_Demolition,-0.018207929130516914,0.008520862443178524
+PKDMainClassName_Dental practice activities,0.07209429830158913,3.2315951960499842
+PKDMainClassName_Dismantling of wrecks,0.00014423570990444517,0.004659163414523291
+PKDMainClassName_Dispensing chemist in specialised stores,0.008894391207892587,0.001880902108987023
+PKDMainClassName_Driving school activities,0.001554247210421233,0.04302608154329746
+PKDMainClassName_Działalność pomocnicza związana z utrzymaniem porządku w budynkach,-0.007640135174481514,5.326256950838201e-05
+PKDMainClassName_Działalność szpitali,0.008738254036976128,0.009716010447706149
+PKDMainClassName_Educational support activities,0.008300318595294754,0.006929567225048983
+PKDMainClassName_Electrical installation,0.014201926446371166,0.00814436078714683
+PKDMainClassName_Engineering activities and related technical consultancy,0.05746744142310807,0.33302795752654746
+PKDMainClassName_Event catering activities,-0.008853785469780454,0.004327585558313638
+PKDMainClassName_Financial leasing,-0.005807695226549551,4.290140918188862e-05
+PKDMainClassName_Finishing of textiles,-0.0006790485782476637,0.007712221324025384
+PKDMainClassName_Fire service activities,0.004278358981329662,0.0
+PKDMainClassName_Floor and wall covering,-0.020266611458307514,0.00979205217170592
+PKDMainClassName_Forging,-0.0013046111051156614,3.873456482824161e-05
+PKDMainClassName_Freight air transport,0.002533337614319836,0.0
+PKDMainClassName_Freight rail transport,-0.000798077313380166,0.0
+PKDMainClassName_Freight transport by road,0.016813195759036108,0.04611198684956393
+PKDMainClassName_Fund management activities,-0.0029783762156258527,0.00011798833512602877
+PKDMainClassName_General cleaning of buildings,-0.02198606498336038,0.018485425540372104
+PKDMainClassName_General medical practice activities,0.05711940569009512,0.032916016813548436
+PKDMainClassName_General secondary education ,0.0037174342487529917,0.0
+PKDMainClassName_Hazardous waste processing and neutralizing,-0.002427470186465282,0.0
+PKDMainClassName_Installation of industrial machinery and equipment and outfit,0.01103663227576254,0.001440412822415488
+PKDMainClassName_Joinery installation,-0.007794394323649795,0.008011668713954147
+PKDMainClassName_Landscape service activities,0.003101556477423181,0.003752307005661763
+PKDMainClassName_Leasing of intellectual property and similar products,0.005271541299275385,0.0
+PKDMainClassName_Library and archives activities,0.00018345715292016998,0.0
+PKDMainClassName_Life insurance,-0.006878170502484528,0.0
+PKDMainClassName_Maintenance and repair of motor vehicles,0.006666156734194399,0.012944739771005975
+PKDMainClassName_Management of real estate on a fee or contract basis,0.017880286601682803,0.00048314068743047947
+PKDMainClassName_Manufacture and processing of other glass,-0.0014832028637640068,0.0
+PKDMainClassName_Manufacture of,0.00356639931971919,0.0
+PKDMainClassName_Manufacture of abrasive products and others non-metallic mineral products not elsewhere classified,0.001693567569529313,0.0
+PKDMainClassName_Manufacture of agricultural and forestry machinery,0.007085201004348223,0.0
+PKDMainClassName_Manufacture of air and spacecraft and related machinery,-0.001535258924883482,0.0
+PKDMainClassName_Manufacture of articles of fur,-0.00141009483414251,0.0
+PKDMainClassName_Manufacture of assembled parquet floors,0.000889820247983386,0.0
+PKDMainClassName_Manufacture of batteries and accumulators,-0.0004959169481794567,0.0
+PKDMainClassName_Manufacture of bearings,0.0030041911535062344,0.0
+PKDMainClassName_Manufacture of bicycles and invalid carriages,0.0022842971605982316,0.0
+PKDMainClassName_Manufacture of bodies ,0.002803115138700653,0.0
+PKDMainClassName_Manufacture of bread,0.0047984473135018755,0.002868209553539112
+PKDMainClassName_Manufacture of bricks,-0.0008774117263767812,0.0030807602471548566
+PKDMainClassName_Manufacture of brooms and brushes,-0.0042696326778592815,0.0
+PKDMainClassName_Manufacture of builders,0.005615563031956372,0.0
+PKDMainClassName_Manufacture of carpets and rugs,0.0002137360410994477,0.0
+PKDMainClassName_Manufacture of cement,0.0004919905067506366,0.0
+PKDMainClassName_Manufacture of central heating radiators and boilers,0.0022610855164397472,0.00352050542896661
+PKDMainClassName_Manufacture of ceramic insulators and hollow insulators,0.0012601033322913204,0.0
+PKDMainClassName_Manufacture of ceramic sanitary fixtures,-0.002232373564050356,0.0
+PKDMainClassName_Manufacture of ceramic tableware and ornamental articles,-0.000997879009628017,0.0
+PKDMainClassName_Manufacture of ceramic tiles and flags,0.0017948995467003185,0.0
+PKDMainClassName_Manufacture of cocoa,0.005318612891207889,0.0
+PKDMainClassName_Manufacture of cold forming products,-0.0001882723542899238,0.0
+PKDMainClassName_Manufacture of computers and peripheral equipment,0.001892113939791448,9.54648501074105e-05
+PKDMainClassName_Manufacture of concrete products for construction purposes,0.0018582202610627914,0.0014095878874763599
+PKDMainClassName_Manufacture of condiments and seasonings,0.0012037570410287296,0.0
+PKDMainClassName_Manufacture of consumer electronics,0.003865376394863777,0.00016765997223533802
+PKDMainClassName_Manufacture of cordage,0.002682614270146297,0.0
+PKDMainClassName_Manufacture of corrugated paper and paperboard and of containers of paper and paperboard,0.007336206345838798,2.8983583557672254e-09
+PKDMainClassName_Manufacture of cutlery,-0.002301149503766864,0.002910223669206344
+PKDMainClassName_Manufacture of dyes and pigments,-0.0002551540226404573,0.0
+PKDMainClassName_Manufacture of electric domestic appliances,-0.0002551540226404595,0.0
+PKDMainClassName_Manufacture of electric lighting equipment,0.00019227188378090994,0.00403348855169214
+PKDMainClassName_Manufacture of electric motors,-0.0035534067452593064,0.0
+PKDMainClassName_Manufacture of electrical and electronic equipment for motor vehicles,0.0008308777440663419,0.0
+PKDMainClassName_Manufacture of electricity distribution and control apparatus,0.010416784536956915,0.0
+PKDMainClassName_Manufacture of electronic components,0.00290042296755838,0.0
+PKDMainClassName_Manufacture of electronic printed circuits,0.007124999474605684,0.0
+PKDMainClassName_Manufacture of engines and turbines,0.0003195215173045517,0.0
+PKDMainClassName_Manufacture of fasteners and screws,0.0034092292079095144,0.0
+PKDMainClassName_Manufacture of fertilisers and nitrogen compounds,0.0018977217400254374,0.0
+PKDMainClassName_Manufacture of flat glass,0.0007583748859913775,0.0
+PKDMainClassName_Manufacture of fluid power equipment,0.002695654261780594,0.000643206100695971
+PKDMainClassName_Manufacture of footwear,-0.0018497842475644506,0.0
+PKDMainClassName_Manufacture of fruit and vegetable juice,0.002826088281995554,0.0
+PKDMainClassName_Manufacture of games and toys,0.0003983691341620966,4.2139254646406606e-05
+PKDMainClassName_Manufacture of glues,1.5704268590913834e-05,0.0
+PKDMainClassName_Manufacture of grain mill products,0.002157387764600356,6.895215208590179e-05
+PKDMainClassName_Manufacture of hollow glass,-0.0036948598458880063,0.0
+PKDMainClassName_Manufacture of homogenised food preparations and dietetic food,0.00016025878157414214,0.0002029180113036128
+PKDMainClassName_Manufacture of household and sanitary goods and of toilet requisites,-0.0019164874724222276,0.0
+PKDMainClassName_Manufacture of ice cream,-0.0009811002375794441,0.0007929257035433244
+PKDMainClassName_Manufacture of imitation jewellery and related articles,-0.008394522660207192,0.0032454364485401577
+PKDMainClassName_Manufacture of industrial cooling and ventilation equipment,-0.0005118652435486835,0.0017625173889955405
+PKDMainClassName_Manufacture of industrial gases,0.002415966248835285,0.0
+PKDMainClassName_Manufacture of installing equipment,-0.0003339781667354981,0.0
+PKDMainClassName_Manufacture of instruments and appliances for measuring,0.0006594991331984759,0.0
+PKDMainClassName_Manufacture of irradiation,-0.0028253267450142777,0.0
+PKDMainClassName_Manufacture of jewellery and related articles,-0.0011376467870599886,0.0037132255071486626
+PKDMainClassName_Manufacture of knitted and crocheted fabrics,0.0010002428249076421,0.0
+PKDMainClassName_Manufacture of knitted and crocheted hosiery,-0.0009561060248304949,0.0
+PKDMainClassName_Manufacture of leather clothes,-0.0013936767013636706,0.0
+PKDMainClassName_Manufacture of lifting equipment and gripping devices,0.001181131796890842,0.0018918539492123057
+PKDMainClassName_Manufacture of lime and plaster,0.0002708360232996388,0.0
+PKDMainClassName_Manufacture of locks and hinges,0.005062310635773357,0.0
+PKDMainClassName_Manufacture of macaroni,0.00013045127678842255,0.0
+PKDMainClassName_Manufacture of machinery for food,0.002095819449118084,0.0
+PKDMainClassName_Manufacture of machinery for metallurgy,0.002042001144905128,0.0
+PKDMainClassName_Manufacture of machinery for mining,0.0036292673644430663,4.4329924326951556e-05
+PKDMainClassName_Manufacture of machinery for paper and paperboard production,0.00017451413875896408,0.0
+PKDMainClassName_Manufacture of machinery for textile,0.0012691767971683265,0.0
+PKDMainClassName_Manufacture of machinery forworking rubber or plastics and for manufacture of the articles from these materials,-0.001903849730635142,0.0
+PKDMainClassName_Manufacture of made-up textile articles,-0.0035242952239024467,0.0013067129916995096
+PKDMainClassName_Manufacture of margarine and similar edible fats,-0.002388753126573125,0.0
+PKDMainClassName_Manufacture of medical and dental instruments and supplies,0.016057742629905638,0.002892597537082732
+PKDMainClassName_Manufacture of metal containers,0.0010136660817747438,0.0
+PKDMainClassName_Manufacture of metal elements of building woodwork,0.00052927289813762,0.000951566456648981
+PKDMainClassName_Manufacture of metal forming machinery,0.0029808011089553317,1.7705387911295216e-08
+PKDMainClassName_Manufacture of metal packaging,0.000752969453296002,0.0
+PKDMainClassName_Manufacture of metal structures and parts of structures,0.004861828656333093,0.0077744435698384835
+PKDMainClassName_Manufacture of mortars,0.0001971178621493075,0.0005340407120341649
+PKDMainClassName_Manufacture of motorcycles,0.0005705790765554668,0.0
+PKDMainClassName_Manufacture of musical instruments,0.0016512916029859728,1.2517727026396917e-05
+PKDMainClassName_Manufacture of non-wovens and articles made from non-wovens,-0.0019068246993788074,4.513458987654331e-05
+PKDMainClassName_Manufacture of office machinery and equipment,0.0008521624511076164,0.0
+PKDMainClassName_Manufacture of oils and other fluid fats,-0.0004733243148799925,0.0
+PKDMainClassName_Manufacture of optical instruments and photographic equipment,0.0009760894934412115,0.00012906698289478016
+PKDMainClassName_Manufacture of other articles of concrete,-0.0035048915432753665,1.163901719480596e-05
+PKDMainClassName_Manufacture of other articles of paper and paperboard,-0.002605968154962171,0.00029132669053503113
+PKDMainClassName_Manufacture of other builders,0.00045921693480896784,0.001983213691699585
+PKDMainClassName_Manufacture of other ceramic products,0.0014447346212626269,0.0
+PKDMainClassName_Manufacture of other chemical products not elsewhere classified,-0.0007287617458036902,0.0
+PKDMainClassName_Manufacture of other electrical equipment,0.006036342954252528,0.0
+PKDMainClassName_Manufacture of other electronic and electric wires and cables,-0.0007243591522298338,0.0
+PKDMainClassName_Manufacture of other fabricated metal products not elsewhere classified,0.006767796942860227,0.00010983660202848995
+PKDMainClassName_Manufacture of other food products not elsewhere classified,-0.0004349672504375602,8.169425380116527e-05
+PKDMainClassName_Manufacture of other general-purpose machinery notelsewhere classified,0.00528056205289047,0.0013791128279105832
+PKDMainClassName_Manufacture of other inorganic basic chemicals,0.0013477578068733765,0.0
+PKDMainClassName_Manufacture of other knitted and crocheted apparel,-0.001862866883755873,5.940289634502884e-05
+PKDMainClassName_Manufacture of other mechanical tools,0.0011913760649887963,0.0
+PKDMainClassName_Manufacture of other motor vehicles excluding motorcycles,0.0007812642362227983,0.0
+PKDMainClassName_Manufacture of other organic basic chemicals,-0.00028766027300804176,0.0
+PKDMainClassName_Manufacture of other outerwear,-0.009177005662315408,0.0007354745443126543
+PKDMainClassName_Manufacture of other parts and accessories for motor vehicles excluding motorcycles,0.001294019158389569,0.0
+PKDMainClassName_Manufacture of other plastic products,0.0035084615914500153,0.0001929676457968402
+PKDMainClassName_Manufacture of other products of wood,-0.00376312581183578,0.01724731565660778
+PKDMainClassName_Manufacture of other pumps and compressors,-0.0016589818348002338,0.0
+PKDMainClassName_Manufacture of other special-purpose machinery notelsewhere classified,0.006779135519653166,6.496138783836042e-05
+PKDMainClassName_Manufacture of other tanks,0.0043964695156639855,0.0
+PKDMainClassName_Manufacture of other taps and valves,-0.0010192317968311596,0.0
+PKDMainClassName_Manufacture of other technical and industrial textiles,0.0012041897403669442,0.0
+PKDMainClassName_Manufacture of other technical ceramic products,0.0015977629240056072,0.0
+PKDMainClassName_Manufacture of other textiles notelsewhere classified,-0.0009018713069384947,0.00020415250814636286
+PKDMainClassName_Manufacture of other transport equipment not elsewhere classified,0.001104497319497363,0.0
+PKDMainClassName_Manufacture of other wearing apparel and accessories,-0.003849995463189245,0.001959812494302447
+PKDMainClassName_Manufacture of ovens,-0.0003924737354040798,0.0
+PKDMainClassName_Manufacture of paints,0.000117797046688298,0.0017717897824557163
+PKDMainClassName_Manufacture of paper and paperboard,-0.0006855779499912581,0.0
+PKDMainClassName_Manufacture of paper stationery,-0.001476720755355305,0.0
+PKDMainClassName_Manufacture of perfumes and toilet preparations,0.0014585703024952495,4.663824032011921e-05
+PKDMainClassName_Manufacture of pig iron,-0.00025184167104781366,0.00021682570038464993
+PKDMainClassName_Manufacture of plaster products for construction purposes,0.0004402593691380325,0.0
+PKDMainClassName_Manufacture of plastic packing goods,0.001345911777692766,0.0
+PKDMainClassName_Manufacture of plastic plates,0.0018094375196092416,4.241185326255053e-05
+PKDMainClassName_Manufacture of plastics in primary forms,0.0020936852085141813,0.0
+PKDMainClassName_Manufacture of power-driven hand tools,0.00215533228254734,0.0
+PKDMainClassName_Manufacture of prepared feeds for farm animals,0.005632779302286341,0.0
+PKDMainClassName_Manufacture of prepared meals and dishes,-0.0046451951259071905,0.004545052001385602
+PKDMainClassName_Manufacture of prepared pet foods,-0.0036603013969605147,0.0
+PKDMainClassName_Manufacture of pulp,-0.000503204668778838,0.0
+PKDMainClassName_Manufacture of railway locomotives and rolling stock,-0.001135427987225604,0.0
+PKDMainClassName_Manufacture of ready-mixed concrete,0.00344066323027144,0.0
+PKDMainClassName_Manufacture of refractory products,0.001816508126373007,0.0
+PKDMainClassName_Manufacture of rubber tyres and tubes,-0.0019437680973693058,9.02553057138279e-05
+PKDMainClassName_Manufacture of rusks and biscuits,-0.000481714551405016,0.0012851787824898384
+PKDMainClassName_Manufacture of soap and detergents,0.0014975938654046416,0.0
+PKDMainClassName_Manufacture of sports goods,-0.00042386829415229875,0.0
+PKDMainClassName_Manufacture of starches and starch products,-0.002128120522368517,0.0
+PKDMainClassName_Manufacture of steam generators,-0.0002528343972560185,0.0
+PKDMainClassName_Manufacture of sugar,-0.002121066695567692,0.0
+PKDMainClassName_Manufacture of tools,0.004268781021442416,0.0
+PKDMainClassName_Manufacture of tubes and pipes,0.002707347222188279,0.0
+PKDMainClassName_Manufacture of underwear,2.4143831444811603e-05,0.0
+PKDMainClassName_Manufacture of veneer sheets and wood-based panels,-0.0028040408685434262,0.002683881448039863
+PKDMainClassName_Manufacture of wallpaper,0.0010606696241379735,0.0
+PKDMainClassName_Manufacture of watches and clocks,0.0023547602699506578,0.0
+PKDMainClassName_Manufacture of wire,0.004078578637061491,0.0
+PKDMainClassName_Manufacture of wire products,-0.001315387622481322,0.0
+PKDMainClassName_Manufacture of wooden containers,-0.002338415954357994,0.0
+PKDMainClassName_Manufacture of wool woven fabrics,0.0001049796009506002,0.0
+PKDMainClassName_Manufacture of workwear,0.0012739289256059683,0.0
+PKDMainClassName_Manufacture of yarn from other textile fibres,-0.00051589838441522,0.0
+PKDMainClassName_Market research and public opinion polling,0.0069318222901059824,0.0003052191678356214
+PKDMainClassName_Mechanical working of metal elements,0.005168103742182047,0.006824942276207435
+PKDMainClassName_Media representation,-0.002364378933656163,0.008724826685611985
+PKDMainClassName_Mobile eating places,-0.03803613229565785,0.09995011717168335
+PKDMainClassName_Motion picture,0.013327108797890523,0.011856952180644968
+PKDMainClassName_Motion picture projection activities,0.0016936032304934953,0.00013037784366609794
+PKDMainClassName_Museums activities,0.0015609038434304422,0.0
+PKDMainClassName_News agency activities,0.0028016843186314346,6.998060971582342e-05
+PKDMainClassName_Non-specialised wholesale of food,-0.0015953462844683997,0.00034424101049718343
+PKDMainClassName_Non-specialised wholesale trade,0.012730888260066452,0.007171502164870631
+PKDMainClassName_Office administrative service activities,0.001012358039057561,0.0034710040887019366
+PKDMainClassName_Operation of dairies and cheese making,0.006557188014217904,0.0
+PKDMainClassName_Operation of fitness facilities,-0.0040198871549835995,0.0012492048393218217
+PKDMainClassName_Operation of historical sites and buildings and similar visitor attractions,0.00461104963722979,0.005530068757189216
+PKDMainClassName_Operation of sports facilities,-0.0010555751832082153,0.0019091823300248583
+PKDMainClassName_Organisation of conventions and trade shows,0.002805001074976533,0.000225967771534706
+PKDMainClassName_Other activities auxiliary to financial services,-0.02231394447862068,0.004691597290638527
+PKDMainClassName_Other activities auxiliary to insurance and pension funding,-0.013963926085797386,0.004434921576089048
+PKDMainClassName_Other amusement and recreation activities,-0.00986334897586074,0.001544268101108583
+PKDMainClassName_Other building completion and finishing,-0.02979371961844706,0.00730643168423549
+PKDMainClassName_Other business support service activities not elsewhere classified,0.0002511748486060972,0.004505147503950338
+PKDMainClassName_Other cleaning activities,-0.006310785582981383,0.012119854753130908
+PKDMainClassName_Other construction installation,-0.0026523796824786086,0.009472766024783101
+PKDMainClassName_Other credit granting,-0.012624290237328592,0.00991301153938514
+PKDMainClassName_Other education n,0.014260097943760182,0.007068329494663105
+PKDMainClassName_Other financial service activities,-0.004671974508537431,0.0033985314518557228
+PKDMainClassName_Other food service activities,-0.00920582949743203,0.019237949866165817
+PKDMainClassName_Other human health activities notelsewhere classified,0.0711228791590017,3.5478495008077573
+PKDMainClassName_Other information service activities not elsewhere classified,-0.0013779289497957844,0.00011941264866511267
+PKDMainClassName_Other manufacturing notelsewhere classified,-0.006309817130479715,0.0034576346037905967
+PKDMainClassName_Other monetary intermediation,-0.007541731403465734,0.004108289562669577
+PKDMainClassName_Other non-ferrous metal production,0.002062189135672388,0.0
+PKDMainClassName_Other passenger land transport not elsewhere classified,0.009165884431840084,0.003977686861744626
+PKDMainClassName_Other personal and property insurance,-0.0057102371721886504,0.0002306492283090623
+PKDMainClassName_Other printing,0.001662420216731001,8.217131239546956e-05
+PKDMainClassName_Other processing and preserving of fruit and vegetables,0.0018060823212283253,2.2000320044565494e-09
+PKDMainClassName_Other publishing activities,-0.001809257418837592,9.362243569281016e-06
+PKDMainClassName_Other research and experimental development on natural sciences and engineering,0.009270231833235408,6.892507027776381e-05
+PKDMainClassName_Other reservation service activities not elsewhere classified,0.006362970424247365,0.00013227044346685472
+PKDMainClassName_Other retail sale in non-specialised stores,-0.03677732238498854,0.08144550095083157
+PKDMainClassName_Other retail sale not in stores,-0.02842939640661518,0.017029132896740153
+PKDMainClassName_Other retail sale of food in specialised stores,-0.009041839240369772,0.004994143192207384
+PKDMainClassName_Other retail sale of new goods in specialised stores,-0.0018472443951355454,0.006363949146796054
+PKDMainClassName_Other social work activities without accommodation notelsewhere classified,-0.0021776144803101,0.0034548204137735032
+PKDMainClassName_Other software publishing,0.005314667066539804,0.0001757249578055425
+PKDMainClassName_Other specialised construction activities not elsewhere classified,-0.01466389499493346,0.01853861398789758
+PKDMainClassName_Other sports activities,0.003547029575581981,0.0006753761690503035
+PKDMainClassName_Other technical testing and analysis,0.013475660087249576,0.0024848114764057898
+PKDMainClassName_Other transportation support activities ,0.004625451490186047,0.002926056237440077
+PKDMainClassName_Packaging activities,-0.005727075333290661,0.0032590144372424243
+PKDMainClassName_Painting and glazing,-0.023956012525934545,0.006466805896628549
+PKDMainClassName_Passenger air transport,0.0060366599823161666,0.0
+PKDMainClassName_Passenger rail transport,0.0032932806304632315,0.0
+PKDMainClassName_Pension funding,-0.0018674879181639079,0.0
+PKDMainClassName_Photocopying,-0.005933743190151199,0.0019567497471135752
+PKDMainClassName_Plastering,-0.03509491826143372,0.02163518735241372
+PKDMainClassName_Plumbing,0.010904718300127911,0.009091385501110216
+PKDMainClassName_Post-secondary non-tertiary education,0.0005875162167460316,0.0
+PKDMainClassName_Pre-press and pre-media services,0.004174859257099501,0.0006894236645319904
+PKDMainClassName_Pre-primary education,0.01628573786155474,4.313568580837076e-05
+PKDMainClassName_Precious metals production,0.0007332672743872994,0.0
+PKDMainClassName_Primary education,0.003330557070929423,0.0
+PKDMainClassName_Printing of newspapers,0.001480325700497665,0.00141488135109243
+PKDMainClassName_Processing and preserving of fish,-0.0012097360380476454,0.0
+PKDMainClassName_Processing and preserving of meat,-0.009221737952409909,0.0
+PKDMainClassName_Processing and preserving of potatoes,-0.0023615239030003055,0.0
+PKDMainClassName_Processing and preserving of poultry meat,-0.0031857294868477925,0.0
+PKDMainClassName_Processing of tea and coffee,-0.0005514576096944171,0.0
+PKDMainClassName_Production of abrasive products,0.0020730154401790582,0.0
+PKDMainClassName_Production of meat products,-0.004237738381185343,0.0029358699290897724
+PKDMainClassName_Produkcja pozostałych wyrobów z gumy,0.007362383341547677,2.0271714121202388e-05
+PKDMainClassName_Produkcja statków i konstrukcji pływających,-0.003311033500925522,1.3161506804158412e-05
+PKDMainClassName_Produkcja toreb bagażowych,0.0017955152317792448,0.0
+PKDMainClassName_Public relations and communication activities,0.009290012370289133,0.00826502330264308
+PKDMainClassName_Publishing of computer games,0.007255067384416286,0.0
+PKDMainClassName_Publishing of directories and registers ,-0.0026161031400920957,0.0
+PKDMainClassName_Publishing of journals and periodicals,0.0010664214671486391,0.006039313581077984
+PKDMainClassName_Publishing of newspapers,-0.004460334225489052,0.004729946860636975
+PKDMainClassName_Real estate agencies,0.006359671868666412,0.0022553077953402353
+PKDMainClassName_Recovery of sorted materials,-0.004674038353375407,0.02000153189184005
+PKDMainClassName_Removal services,-0.0024457916375400087,0.00046675400992651794
+PKDMainClassName_Rental and leasing of agricultural machinery and equipment,0.011622440644071528,0.00034335213231052213
+PKDMainClassName_Rental and leasing of air transport equipment,0.002224367293783425,0.0
+PKDMainClassName_Rental and leasing of cars and light motor vehicles,0.003197920499559008,0.0020886837602056042
+PKDMainClassName_Rental and leasing of construction machinery and equipment,0.004472007905379513,0.009304875516137366
+PKDMainClassName_Rental and leasing of office machinery and equipment,0.0033369575657285527,0.0
+PKDMainClassName_Rental and leasing of other machinery,-0.0009615569236679462,0.002299560057727093
+PKDMainClassName_Rental and leasing of other motor vehicle,0.0024162962540448594,0.0006113595066465197
+PKDMainClassName_Rental and leasing of other personal and household goods,-0.0013117613338837126,0.0007707353913375803
+PKDMainClassName_Rental and leasing of recreational and sports goods,-0.002908610352532634,0.0002728597816510809
+PKDMainClassName_Rental and leasing of water transport equipment,0.0006227069595224411,0.0
+PKDMainClassName_Rental and operating of own or leased real estate,0.0255627089496134,0.0022304084857621065
+PKDMainClassName_Rental of video tapes and  CDs,-0.006035659021798917,0.00320336788205481
+PKDMainClassName_Repair and maintenance of ,0.0017129403429361077,0.0
+PKDMainClassName_Repair and maintenance of aircraft and spacecraft,0.00742390743495621,0.0
+PKDMainClassName_Repair and maintenance of computers and peripheral equipment,0.00489410738247373,0.005176305758769021
+PKDMainClassName_Repair and maintenance of consumer electronics,0.0018076946551640622,0.0
+PKDMainClassName_Repair and maintenance of electrical equipment,0.013934589521062732,0.001261687617459029
+PKDMainClassName_Repair and maintenance of electronic and optical equipment,0.005115736207273451,0.0006694855678518279
+PKDMainClassName_Repair and maintenance of fabricated metal products,0.005432188047381082,2.5641716044410835e-05
+PKDMainClassName_Repair and maintenance of furniture and home furnishings,-0.0019239116979460364,2.1991794436303654e-05
+PKDMainClassName_Repair and maintenance of household appliances and home and garden equipment,0.005554351210018541,0.0006441112995414869
+PKDMainClassName_Repair and maintenance of machinery,0.014772559849326215,0.003930392386145755
+PKDMainClassName_Repair and maintenance of other equipment,0.0012750639625726254,0.00024443595712200387
+PKDMainClassName_Repair and maintenance of other transport equipment,-1.6884764782872617e-05,0.0
+PKDMainClassName_Repair and maintenance of ships and boats,-0.006712937130580814,0.0044126268703419845
+PKDMainClassName_Repair of footwear and leather goods,-0.005016426971586774,0.004340257581322293
+PKDMainClassName_Repair of other personal and household goods,-0.007384021565671227,0.0025633868575409536
+PKDMainClassName_Repair of watches,0.0018667741303005233,0.0
+PKDMainClassName_Reproduction of recorded media,5.340779226472362e-06,0.0
+PKDMainClassName_Research and experimental development on biotechnology,-0.0006109316806550113,0.0
+PKDMainClassName_Research and experimental development on social sciences and humanities,0.0016411807938346455,0.0
+PKDMainClassName_Retail sale in non-specialised stores with food,-0.01844203702965168,0.04115231112952831
+PKDMainClassName_Retail sale of alcoholic and non-alcoholic beverages in specialised stores,-0.011363924317783011,0.014435057848316262
+PKDMainClassName_Retail sale of audio and video equipment in specialised stores,0.0008746818124542501,9.025324258656905e-06
+PKDMainClassName_Retail sale of books in specialised stores,0.0001010670007094583,0.0028161995838574317
+PKDMainClassName_Retail sale of bread,-0.01027099127215682,0.006747895008041655
+PKDMainClassName_Retail sale of carpets,0.0028860288210361116,0.00026138164529482873
+PKDMainClassName_Retail sale of clothing in specialised stores,-0.06369469410778622,0.05693948373313033
+PKDMainClassName_Retail sale of computers,0.002845745265140774,0.011990919038803796
+PKDMainClassName_Retail sale of cosmetic and toilet articles in specialised stores,-0.01210566317579568,0.005199574874537312
+PKDMainClassName_Retail sale of electrical household appliances in specialised stores,-0.0014742722185257027,0.0007601874110507031
+PKDMainClassName_Retail sale of fish,-0.007977140032520726,0.0001684720215538331
+PKDMainClassName_Retail sale of flowers,-0.01599873695195893,0.0018706266703939713
+PKDMainClassName_Retail sale of footwear and leather goods in specialised stores,-0.016268071609631573,0.0045185013863790575
+PKDMainClassName_Retail sale of fruit and vegetables in specialised stores,-0.02407464289546231,0.006363582831411311
+PKDMainClassName_Retail sale of fuel for motor vehicles in fuel stations,0.007382563835140583,2.4122016593396108e-05
+PKDMainClassName_Retail sale of furniture,-0.004958148586247677,0.003920630556800489
+PKDMainClassName_Retail sale of games and toys in specialised stores,-0.012761506024170421,0.014516432472229173
+PKDMainClassName_Retail sale of hardware,0.009668322543118604,0.002868012755861274
+PKDMainClassName_Retail sale of meat and meat products in specialised stores,-0.00747957112090097,0.0005306310478323819
+PKDMainClassName_Retail sale of medical and orthopaedic goods in specialised stores,0.009928990863317529,0.005163772009734507
+PKDMainClassName_Retail sale of music and video recordings in specialised stores,-0.0027065108579165846,0.0
+PKDMainClassName_Retail sale of newspapers and stationery in specialised stores,-0.012024477096898183,0.011318845290512735
+PKDMainClassName_Retail sale of second-hand goods in specialised stores,-0.07346336260359924,0.01949491401509655
+PKDMainClassName_Retail sale of sporting equipment in specialised stores,0.0017255515400096987,0.03321331294631958
+PKDMainClassName_Retail sale of telecommunications equipment in specialised stores,-0.0006567379004339365,0.008044555601405488
+PKDMainClassName_Retail sale of textiles in specialised stores,-0.012571173541964485,0.0
+PKDMainClassName_Retail sale of tobacco products in specialised stores,-0.001832154678337306,4.907407612564192e-05
+PKDMainClassName_Retail sale of watches,-0.0015708798884869354,0.0007691816975657586
+PKDMainClassName_Retail sale via mail order houses or via Internet,-0.03313933167988383,0.011739443344043594
+PKDMainClassName_Retail sale via stalls and markets of food,-0.030167634567476485,0.005179642931533532
+PKDMainClassName_Retail sale via stalls and markets of other goods,-0.03416300997373566,0.01072989933619363
+PKDMainClassName_Retail sale via stalls and markets of textiles,-0.054888690719666754,0.008414121544373333
+PKDMainClassName_Retail trade of motor vehicle parts and accessories,0.018055795891197744,0.01806838952598361
+PKDMainClassName_Risk and damage evaluation,-0.0007556133980585003,0.0031275147736972444
+PKDMainClassName_Roofing activities,-0.008533051456192691,0.0044405452438834245
+PKDMainClassName_Sale,0.0014469980938547563,0.0018841954057047896
+PKDMainClassName_Sale of cars and light motor vehicles,0.011598483046962713,0.014073910756688367
+PKDMainClassName_Sale of other motor vehicles,0.009301793381976696,0.004835756912236165
+PKDMainClassName_Sawmilling and planing of wood,0.0010013871563441371,0.005327491750741456
+PKDMainClassName_Security and commodity contracts brokerage,0.004038634306228728,0.00016608916411826752
+PKDMainClassName_Service activities incidental to air transportation,0.006215067810417384,0.0
+PKDMainClassName_Service activities incidental to land transportation,-0.0026356880929003395,0.0016862935719503226
+PKDMainClassName_Service activities incidental to water transportation,-0.00038543381083861475,0.0024273288705471
+PKDMainClassName_Shaping and processing of flat glass,0.004714517781421092,0.0
+PKDMainClassName_Site preparation,0.0052278798631249235,0.004403246756913902
+PKDMainClassName_Social work activities without accommodation for the elderly and disabled,-0.031171273356319244,0.0077147364272867796
+PKDMainClassName_Sound recording and music publishing activities,-0.0034829694259410644,0.0
+PKDMainClassName_Space transport,-4.305968873169372e-05,0.0
+PKDMainClassName_Specialised building and industrial cleaning activities,0.001829108584740612,0.00668837825563606
+PKDMainClassName_Specialist medical practice activities,0.08634617420168905,4.675384347957494
+PKDMainClassName_Sports and recreation education,0.011297520976139917,0.0044358563361770326
+PKDMainClassName_Striking of coins,-0.0011377166263910258,0.0
+PKDMainClassName_Tanning and dressing of leather,0.0018688065442339058,0.0
+PKDMainClassName_Taxi operation,0.037608028815606,0.024689874970948173
+PKDMainClassName_Technical and vocational secondary education ,-0.0011898431472319492,0.0
+PKDMainClassName_Tertiary education,0.0020420011449051273,0.0
+PKDMainClassName_Test drilling and boring,0.0035960329258067935,0.0018174093458123766
+PKDMainClassName_Tour operator activities,0.008196807107686215,0.013670300962746225
+PKDMainClassName_Transport via pipeline of othercommodities,-0.0009292105430273441,0.0
+PKDMainClassName_Travel agency activities,0.0024693170073498095,0.004216170448117093
+PKDMainClassName_Treatment and coating of metals,0.0028063971205872823,0.0035130105932491915
+PKDMainClassName_Treatment and disposal of non-hazardous waste,-0.0019162364227547635,0.007084040026832903
+PKDMainClassName_Urban and suburban passenger land transport,0.00168799008471956,0.007754338202733992
+PKDMainClassName_Warehousing and storage of other goods,0.0018640848529686926,0.00329890011732747
+PKDMainClassName_Web portals,-0.006438131230747027,0.011556656591152903
+PKDMainClassName_Wholesale of agricultural machinery,0.015020941438456788,9.814732683022424e-08
+PKDMainClassName_Wholesale of beverages,-0.004038629176761837,0.011259268728192478
+PKDMainClassName_Wholesale of chemical products,0.00617588702586498,0.0018319094577795968
+PKDMainClassName_Wholesale of china,-6.613578510263964e-05,0.000444382465641156
+PKDMainClassName_Wholesale of clothing and footwear,-0.0070069460311929024,0.0013459984731385352
+PKDMainClassName_Wholesale of coffee,-0.00016614285620285976,2.3794125828224972e-05
+PKDMainClassName_Wholesale of computers,0.002065373615217578,0.003741426453587966
+PKDMainClassName_Wholesale of dairy products,-0.000914307730585753,0.007774456809149865
+PKDMainClassName_Wholesale of electrical household appliances,0.0018147412795844694,0.0009000777227116607
+PKDMainClassName_Wholesale of electronic and telecommunications equipment and parts thereof,0.00381301611493834,0.0008496685755252071
+PKDMainClassName_Wholesale of flowers and plants,-0.003677018762098264,0.006769845713061247
+PKDMainClassName_Wholesale of fruit and vegetables,0.0048692955035704675,0.003006226009757277
+PKDMainClassName_Wholesale of fuels and related products,0.002370975907422411,0.014187050525038306
+PKDMainClassName_Wholesale of furniture,0.003028671028743475,4.2658432158426304e-05
+PKDMainClassName_Wholesale of grain,0.008635186468704117,0.0003945877435632075
+PKDMainClassName_Wholesale of hardware and plumbing and heating equipment and supplies,0.009989932236336301,0.0052079754282181945
+PKDMainClassName_Wholesale of hides,0.004072917964035607,0.0
+PKDMainClassName_Wholesale of live animals,0.005837943777048439,0.0053082860320031395
+PKDMainClassName_Wholesale of machine tools,-0.0013622156525579883,0.0
+PKDMainClassName_Wholesale of machinery for the textile industry and of sewing and knitting machines,0.00023501678947761954,0.0
+PKDMainClassName_Wholesale of meat and meat products,0.00023495794552919232,0.0
+PKDMainClassName_Wholesale of metals and metal ores,0.000363718261645862,0.009183193023242392
+PKDMainClassName_Wholesale of mining,0.0033984174622400565,0.00037947577360454283
+PKDMainClassName_Wholesale of office furniture,0.00539225726301303,0.007003866039898392
+PKDMainClassName_Wholesale of other food,0.00042002155969126227,2.2015560280968878e-08
+PKDMainClassName_Wholesale of other household goods,0.0023041952263308527,0.00013290228094461323
+PKDMainClassName_Wholesale of other intermediate products,0.004495917002107689,0.0004993360199939667
+PKDMainClassName_Wholesale of other machinery and equipment,0.012247123871075585,9.86161325056247e-05
+PKDMainClassName_Wholesale of other office machinery and equipment,0.0011245788574700147,0.001597442180346522
+PKDMainClassName_Wholesale of perfume and cosmetics,-0.0019278998328440364,0.0026659883449592146
+PKDMainClassName_Wholesale of pharmaceutical goods,0.005534769806351262,0.0033297735496666185
+PKDMainClassName_Wholesale of sugar and chocolate and sugar confectionery,-0.006499751975208188,0.0005086226997878939
+PKDMainClassName_Wholesale of textiles,-0.00457642407913586,0.004723105091556211
+PKDMainClassName_Wholesale of tobacco products,-0.0023907491958762373,0.0
+PKDMainClassName_Wholesale of waste and scrap,0.0005733983543609043,0.05906140389349655
+PKDMainClassName_Wholesale of watches,0.0007980404753673399,0.003609333187783039
+PKDMainClassName_Wholesale of wood,0.016112410566284218,0.009262194325537588
+PKDMainClassName_Wholesale trade of motor vehicle parts and accessories,0.007032387434932577,0.0027613450381356944
+PKDMainClassName_Works related to construction of bridges and tunnels,-0.010794672504477321,0.004168973678053123
+PKDMainClassName_Works related to construction of other civil engineering projects not elsewhere classified,-0.0017975213497341466,0.0010949984279840597
+PKDMainClassName_Works related to construction of railways and underground railways,0.006281942391934502,4.410227859449503e-09
+PKDMainClassName_Works related to construction of roads and motorways,-0.006638641348959131,0.00040269393786290407
+PKDMainClassName_Works related to construction of telecommunications and electricity lines,0.010392654231417602,0.00032711976604871454
+PKDMainClassName_Works related to construction of water projects,0.005595428282111909,0.0010776811929244321
+PKDMainClassName_Works related to construction oftransmission pipelines and distribution networks,0.0013695670651902828,0.002987941103651951
+PKDMainClassName_empty,0.04949021573617806,3.260840410054116
