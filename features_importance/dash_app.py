@@ -33,18 +33,18 @@ app.layout = html.Div([
     ],    
     style={'width': '20%', 'display': 'inline-block', 'margin-bottom': '20px'}),    
 
-    #html.Div([
-    #    html.Label('Show top'),
-    #    dcc.Slider(
-    #        id='expectancy-slider',
-    #        min=3,
-    #        max=10,
-    #        value=3,
-    #        step=None,
-    #        marks=dict([(str(v),str(v)) for v in range(3,11)]+[('1000000000000', 'all')])
-    #    ),
-    #],
-    #style={'width': '20%', 'display': 'inline-block', 'margin-bottom': '20px', 'margin-left': '20px'}),
+    html.Div([
+       html.Label('Showing only top 10 columns (+ last 10 for correlations).'),
+       # dcc.Slider(
+       #     id='expectancy-slider',
+       #     min=3,
+       #     max=10,
+       #     value=3,
+       #     step=None,
+       #     marks=dict([(str(v),str(v)) for v in range(3,11)]+[('1000000000000', 'all')])
+       # ),
+    ],
+    style={'width': '20%', 'display': 'inline-block', 'margin-bottom': '20px', 'margin-left': '20px'}),
 
     html.Div([
         dcc.Graph(id='life-exp-vs-gdp'),
@@ -60,18 +60,16 @@ app.layout = html.Div([
     ])
 def update_graph(country):
 
-    data = df[country]
-    filtered_df = data[data.abs()>0.05]#.loc[df["life expectancy"] > expectancy]
-
-    #if (country != '' and country is not None):
-    #    filtered_df = filtered_df[df.country.str.contains('|'.join(country))]
+    data = df[country].sort_values(ascending=False)
+    filtered_df = data[:10]#[data.abs()>=0.03]#.loc[df["life expectancy"] > expectancy]
+    if country == 'correlations':
+        filtered_df = filtered_df.append(data[-10:])
 
     traces = []
-    df_by_continent = filtered_df.sort_values(ascending=False)#[:expectancy]
     traces.append(go.Bar(
-        x=df_by_continent.index,
-        y=df_by_continent,
-        text=df_by_continent.index,
+        x=filtered_df.index,
+        y=filtered_df,
+        text=filtered_df.index,
     ))
     
     ranges = {'correlations': [-1,1], 'importance': [0,100]}
