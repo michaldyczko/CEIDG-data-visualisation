@@ -6,7 +6,7 @@ import plotly.graph_objects as go
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
-from dash.dependencies import Input, Output
+from dash.dependencies import Input, Output, State
 import json
 import os
 os.chdir(r'C:\Users\Franciszek.Grymula\Documents\_Szkoła\CEIDG-data-visualisation\final_app\scripts')
@@ -14,8 +14,14 @@ os.chdir(r'C:\Users\Franciszek.Grymula\Documents\_Szkoła\CEIDG-data-visualisati
 
 ## preparation
 df = pd.read_csv('../data/ceidg_data_surviv_preprocessed.zip', compression='zip')
+
+'''
 df['MainAddressVoivodeshipFromTERCVerbose'] = df['MainAddressVoivodeshipFromTERCVerbose'].fillna('brak')
 df['PKDMainSection'] = df['PKDMainSection'].fillna('brak')
+df['MainAddressCommuneTypeFromTERCVerbose'] = df['MainAddressCommuneTypeFromTERCVerbose'].fillna('brak')
+'''
+
+df.fillna('brak', inplace=True)
 
 # histograms
 # correlation, feature importance
@@ -32,22 +38,11 @@ km_values = {feature: df[feature].unique().tolist() for feature in km_features}
 
 km_curves = pd.read_csv('../data/km_curves.csv')
 
-KM_description = [
-    'Krzywa Kaplana-Meiera jest estymatorem funkcji przeżycia danej wzorem',
-    'gdzie T jest zmienną losową określającą długość życia spółki.\n\nMa on następującą postać:',
-    '''gdzie
-    ti są uporządkowanymi niemalejąco miesiącami zamknięcia (śmierci) spółek w próbie,
-    ni jest liczbą działających (żywych) spółek w miesiącu ti,
-    di jest lcizbą zamknięć (śmierci) spółek w miesiącu ti.
-    Im większe wartości krzywej w punkcie ti, tym większe prawdopodobieństwo, że spółki z danej grupy
-    dożyją co najmniej do momentu ti'''
-]
-
 # heatmap
-axis_key = ['MainAddressVoivodeshipFromTERCVerbose', 'PKDMainSection', 'SexEncoded', 'HasPolishCitizenshipEncoded', 'MainAddressCommuneTypeFromTERCVerbose']
+axis_key = ['MainAddressVoivodeshipFromTERCVerbose', 'PKDMainSection', 'Sex', 'HasPolishCitizenshipEncoded', 'MainAddressCommuneTypeFromTERCVerbose']
 axis_name = {
     'MainAddressVoivodeshipFromTERCVerbose': 'Województwo',
-    'SexEncoded': 'Płeć właściciela',
+    'Sex': 'Płeć właściciela',
     'PKDMainSection': 'Rodzaj działalności',
     'HasPolishCitizenshipEncoded': 'Polskie obywatelstwo',
     'MainAddressCommuneTypeFromTERCVerbose': 'Typ gminy',
@@ -168,125 +163,151 @@ app = dash.Dash(external_stylesheets=external_stylesheets)
 
 
 ## app layout
+summary = '''
+    # Centralna Ewidencja i Informacja o Działalności Gospodarczej
+    #### Michał Dyczko, Franciszek Grymuła, Łukasz Osowicki, Łukasz Pałys, Jeremiasz Wołosiuk
+    Ninijesza aplikacja ma na celu interaktywną wizualizację oraz
+    eksploracjną analizę danych zawartych w Centralnej Ewidencji
+    i Informacji o Działalności Gospodarczej.
+    Pozwala ona uzyskać rozeznanie na temat długości życia firm
+    i wpływu różnych zmiennych dostępnych w zbiorzę na tę długość.
+    Na potrzeby ćwiczenia wykorzystano zbiór zawierajacy 287 026 obserwacji
+    firm, które rozpoczęły działalność w roku 2011.
+    Analizie poddane zostały takie zmienne jak płeć założyciela,
+    adres rejestracji firmy, sekcja PKD (Polska Klasyfikacja Działalności),
+    czy liczba kodów PKD, a do jej wykonania użyto narzędzi takich jak
+    estymator Kaplana-Meiera oraz las losowy.
+    Istotność wyników analizy jest ograniczona przez brak dostępu do zmiennych
+    ilościowych takich jak miesięczne obroty, czy miesięczna sprzedaż spółki.
+    '''
+
+KM_description = [
+    'Krzywa Kaplana-Meiera jest estymatorem funkcji przeżycia danej wzorem',
+    'gdzie T jest zmienną losową określającą długość życia spółki.\n\nMa on następującą postać:',
+    '''gdzie
+    ti są uporządkowanymi niemalejąco miesiącami zamknięcia (śmierci) spółek w próbie,
+    ni jest liczbą działających (żywych) spółek w miesiącu ti,
+    di jest lcizbą zamknięć (śmierci) spółek w miesiącu ti.
+    Im większe wartości krzywej w punkcie ti, tym większe prawdopodobieństwo, że spółki z danej grupy
+    dożyją co najmniej do momentu ti'''
+]
+
 app.layout = html.Div([
+    # summary
+    html.Div([
+        dcc.Markdown(summary)
+    ]),
     
     # histograms
     html.Div([
-        dcc.Graph(id='lifetime-hist'),
-        html.Label('Wybierz dwa województwa:'),
-        dcc.Dropdown(
-            id='voievodships',
-            options=[
-                {'label': f, 'value': f}
-                    for f in km_values['MainAddressVoivodeshipFromTERCVerbose']
-                    if f is not np.nan
-            ] + [
-                {'label': 'Whole country', 'value': 'whole_dataset'},
-                {'label': 'brak', 'value': 'brak'}
-            ],
-            value=['whole_dataset', 'MAZOWIECKIE'],
-            multi=True
-        )
-        ], style={'width': '70%', 'display': 'inline-block'}),
+        html.Div([
+            html.Label('Wybierz dwa województwa do porównania:'),
+            dcc.Dropdown(
+                id='voievodships',
+                options=[
+                    {'label': f, 'value': f}
+                        for f in km_values['MainAddressVoivodeshipFromTERCVerbose']
+                        if f is not np.nan
+                ] + [
+                    {'label': 'Whole country', 'value': 'whole_dataset'},
+                    {'label': 'brak', 'value': 'brak'}
+                ],
+                value=['whole_dataset', 'MAZOWIECKIE'],
+                multi=True),
+            ], style={'width': '30%', 'display': 'inline-block', 'float': 'left'}),
+        html.Div([
+            dcc.Graph(id='lifetime-hist')
+        ], style={'width': '70%', 'display': 'inline-block', 'float': 'right'})
+    ], style={'width': '100%', 'display': 'inline-block'}),
 
     # correlation, feature importance
     html.Div([
-        dcc.Graph(id='life-exp-vs-gdp'),
-        html.Label('Wybierz metrykę'),
-        dcc.Dropdown(
-            id='column',
-            options=[{'label': 'Korelacja', 'value': 'correlations'},
-                     {'label': 'Feature importance', 'value': 'importance'}],
-            value = 'importance',
-            clearable=False
-        ),
-    #    html.Label('Show top'),
-    #    dcc.Slider(
-    #        id='expectancy-slider',
-    #        min=3,
-    #        max=10,
-    #        value=3,
-    #        step=None,
-    #        marks=dict([(str(v),str(v)) for v in range(3,11)]+[('1000000000000', 'all')])
-    #    ),
-    ], style={'width': '70%', 'display': 'inline-block'}),
+        html.Div([
+            html.Label('Wybierz metrykę'),
+            dcc.Dropdown(
+                id='column',
+                options=[{'label': 'Korelacja', 'value': 'correlations'},
+                         {'label': 'Feature importance', 'value': 'importance'}],
+                value = 'importance',
+                clearable=False)
+        ], style={'width': '30%', 'display': 'inline-block', 'float': 'left'}),
+        html.Div([
+            dcc.Graph(id='life-exp-vs-gdp')
+        ], style={'width': '70%', 'display': 'inline-block', 'float': 'right'})
+    ], style={'width': '100%', 'display': 'inline-block'}),
     
     # KM curve
     html.Div([
-        dcc.Graph(id='KM-curve'),
-        html.Label('Wybierz zmienną:'),
-        dcc.Dropdown(
-            id='KM-features',
-            options=[
-                {'label': f, 'value': f} for f in km_features
-            ] + [
-                {'label': 'Cała próba', 'value': 'whole_dataset'}
-            ],
-            value='whole_dataset'
-        ),
-        dcc.Markdown(KM_description[0]),
-        html.Img(
-            src='https://wikimedia.org/api/rest_v1/media/math/render/svg/01e97aef4d5ebd2d88d07d2afd392cf12131e657'
-        ),
-        dcc.Markdown(KM_description[1]),
-        html.Img(
-            src='https://wikimedia.org/api/rest_v1/media/math/render/svg/8575184e8c8133a3fa1c83e039773178fe51872a'
-        ),
-        dcc.Markdown(KM_description[2]),
-        ], style={'width': '70%', 'display': 'inline-block'}),
+        html.Div([
+            html.Label('Wybierz zmienną:'),
+            dcc.Dropdown(
+                id='KM-features',
+                options=[
+                    {'label': f, 'value': f} for f in km_features
+                ] + [
+                    {'label': 'Cała próba', 'value': 'whole_dataset'}
+                ],
+                value='whole_dataset'),
+            dcc.Markdown(KM_description[0]),
+            html.Img(
+                src='https://wikimedia.org/api/rest_v1/media/math/render/svg/01e97aef4d5ebd2d88d07d2afd392cf12131e657'),
+            dcc.Markdown(KM_description[1]),
+            html.Img(
+                src='https://wikimedia.org/api/rest_v1/media/math/render/svg/8575184e8c8133a3fa1c83e039773178fe51872a'),
+            dcc.Markdown(KM_description[2])
+        ], style={'width': '30%', 'display': 'inline-block', 'float': 'left'}),
+        html.Div([
+            dcc.Graph(id='KM-curve')
+        ], style={'width': '70%', 'display': 'inline-block', 'float': 'right'})
+    ], style={'width': '100%', 'display': 'inline-block'}),
     
     # heatmap
     html.Div([
-        dcc.Graph(id='heatmap'),
         html.Div([
-            html.Label('Wybierz zmienną na osi Y'),
-            dcc.Dropdown(
-                id='Y_dropdown',
-                options=[{'label': axis_name[i], 'value': i} for i in axis_key],
-                value=axis_key[0],
-                placeholder="Wybierz"
-            )
-        ], style={'width': '22%', 'display': 'inline-block'}),
+            html.Div([
+                html.Label('Wybierz zmienną na osi Y'),
+                dcc.Dropdown(
+                    id='Y_dropdown',
+                    options=[{'label': axis_name[i], 'value': i} for i in axis_key],
+                    value=axis_key[0],
+                    placeholder="Wybierz"),
+                html.Label('Wybierz wartości zmiennej Y'),
+                dcc.Dropdown(
+                    id='multiY_dropdown',
+                    options=[{'label': i, 'value': i} for i in df[axis_key[0]].unique()],
+                    multi=True,
+                    value=df[axis_key[0]].unique().tolist())
+            ], style={'width': '50%', 'display': 'inline-block', 'float': 'left'}),
+            html.Div([
+                html.Label('Wybierz zmienną na osi X'),
+                dcc.Dropdown(
+                    id='X_dropdown',
+                    options=[{'label': axis_name[i], 'value': i} for i in axis_key],
+                    value=axis_key[1],
+                    placeholder="Wybierz"),
+                html.Label('Wybierz wartości zmiennej X'),
+                dcc.Dropdown(
+                    id='multiX_dropdown',
+                    options=[{'label': i, 'value': i} for i in df[axis_key[1]].unique()],
+                    multi=True,
+                    value=df[axis_key[1]].unique().tolist())
+            ], style={'width': '50%', 'display': 'inline-block', 'float': 'right'}),
+        ], style={'width': '30%', 'display': 'inline-block', 'float': 'left'}),
         html.Div([
-            html.Label('Wybierz zmienną na osi X'),
-            dcc.Dropdown(
-                id='X_dropdown',
-                options=[{'label': axis_name[i], 'value': i} for i in axis_key],
-                value=axis_key[1],
-                placeholder="Wybierz"
-            )
-        ], style={'width': '22%', 'float': 'right', 'display': 'inline-block'}),
-        html.Div([
-            html.Label('Wybierz wartości zmiennej X'),
-            dcc.Dropdown(
-                id='multiX_dropdown',
-                options=[{'label': i, 'value': i} for i in df[axis_key[1]].unique()],
-                multi=True,
-                value=df[axis_key[1]].unique().tolist()
-            )
-        ], style={'width': '22%', 'float': 'right', 'display': 'inline-block'}),
-        html.Div([
-            html.Label('Wybierz wartości zmiennej Y'),
-            dcc.Dropdown(
-                id='multiY_dropdown',
-                options=[{'label': i, 'value': i} for i in df[axis_key[0]].unique()],
-                multi=True,
-                value=df[axis_key[0]].unique().tolist()
-            )
-        ], style={'width': '22%', 'display': 'inline-block'}),
-        html.Div([
-            html.Label('Ustawienia skali:'),
-            dcc.RadioItems(
-                id='scale_radio',
-                options=[
-                    {'label': 'skala stała', 'value': 'CONST'},
-                    {'label': 'skala dopasowująca', 'value': 'AUTO'},
-                ],
-                value='CONST',
-                labelStyle={'display': 'inline-block'}
-            )
-        ], style={'width': '22%', 'display': 'inline-block'}),
-    ]),
+            dcc.Graph(id='heatmap'),
+            html.Div([
+                html.Label('Ustawienia skali:'),
+                dcc.RadioItems(
+                    id='scale_radio',
+                    options=[
+                        {'label': 'wartości bezwzględne', 'value': 'CONST'},
+                        {'label': 'wartości znormalizowane', 'value': 'AUTO'},
+                    ],
+                    value='CONST',
+                    labelStyle={'display': 'inline-block'})
+            ], style={'width': '100%', 'display': 'inline-block', 'float': 'left'})
+        ], style={'width': '70%', 'display': 'inline-block', 'float': 'right'})
+    ], style={'width': '100%', 'display': 'inline-block'}),
     
     # map
     html.Div([
@@ -297,10 +318,8 @@ app.layout = html.Div([
                     type='button',
                     id='refresh_button',
                     style={'border': 'solid', 'width': '100%', 'font-size': 'large', 'text-transform': 'uppercase',
-                           'color': 'white', 'background': 'black', 'border-radius': '16px', 'border-color': 'black'}
-                    )
-                ], style={'padding': '8px'}
-            ),
+                           'color': 'white', 'background': 'black', 'border-radius': '16px', 'border-color': 'black'})
+                ], style={'padding': '8px'}),
             option_div(
                 "Wybierz rodzaj mapy:",
                 dcc.Dropdown(
@@ -310,9 +329,7 @@ app.layout = html.Div([
                         {'label': 'Wojewodztwa', 'value': 'voivo'},
                         ],
                     value='county',
-                    style={'margin-top': '12px'}
-                )
-            ),
+                    style={'margin-top': '12px'})),
             create_check_list(
                 'Płeć:', 'sex', [1, 0], ['Kobieta', 'Mężczyzna']),
             create_check_list(
@@ -326,20 +343,16 @@ app.layout = html.Div([
             create_check_list(
                 'Kwartał załozenia firmy:', 'start_quarter', [0, 1, 2, 3],
                 ['Pierwszy', 'Drugi', 'Trzeci', 'Czwarty']),
-        ], style={'width': '30%', 'display': 'inline-block', 'vertical-align': 'top', 'box-sizing': 'border-box'}
-        ),
+        ], style={'width': '30%', 'display': 'inline-block', 'vertical-align': 'top', 'box-sizing': 'border-box'}),
         html.Div([
             html.Label('Średni czas życia firmy w miesiącach',
                        style={'font-weight': 'bold', 'font-size': 'x-large', 'width': '100%',
                               'text-align': 'center', 'border-bottom-style': 'solid', 'display': 'inline-block'}),
             dcc.Graph(
                 id='voivo-map',
-#                figure=map_maker.make_county_map()
-                )
-        ], style={'width': '70%', 'display': 'inline-block', 'border-left-style': 'solid', 'box-sizing': 'border-box'}
-        )
-    ], style={'border': 'solid', 'box-sizing': 'border-box', 'border-width': '4px'}
-    )
+                figure=map_maker.make_county_map())
+        ], style={'width': '70%', 'display': 'inline-block', 'border-left-style': 'solid', 'box-sizing': 'border-box'})
+    ], style={'border': 'solid', 'box-sizing': 'border-box', 'border-width': '4px'})
 ])
 
               
@@ -387,9 +400,6 @@ def update_lifetime_hist(value):
 def update_corr_feat(country):
     data = df_corr_feat[country]
     filtered_df_corr_feat = data[data.abs()>0.05]#.loc[df_corr_feat["life expectancy"] > expectancy]
-
-    #if (country != '' and country is not None):
-    #    filtered_df_corr_feat = filtered_df_corr_feat[df_corr_feat.country.str.contains('|'.join(country))]
     
     df_corr_feat_by_continent = filtered_df_corr_feat.sort_values(ascending=False)#[:expectancy]
     fig = go.Figure(go.Bar(
@@ -450,7 +460,7 @@ def update_multiX_dropdown(tag):
 @app.callback(
     Output('multiX_dropdown', 'value'), [Input('X_dropdown', 'value')])
 def update_multiX_dropdown_value(tag):
-    return [i for i in df[tag].unique()]
+    return df[tag].unique().tolist()
 
 @app.callback(
     Output('multiY_dropdown', 'options'), [Input('Y_dropdown', 'value')])
@@ -460,7 +470,7 @@ def update_multiY_dropdown(tag):
 @app.callback(
     Output('multiY_dropdown', 'value'), [Input('Y_dropdown', 'value')])
 def update_multiY_dropdown_value(tag):
-    return [i for i in df[tag].unique()]
+    return df[tag].unique().tolist()
 
 @app.callback(
     Output('heatmap', 'figure'),
@@ -500,25 +510,25 @@ def update_graph(X_dropdown, Y_dropdown, multiX_dropdown, multiY_dropdown, scale
             colorscale='Viridis'))
     
     title_text = f'Średni czas życia w zależności od zmiennych: {axis_name[Y_dropdown]}, {axis_name[X_dropdown]}.<br>' + \
-        f'Najlepszy wynik: {maxsale[Y_dropdown][0].upper()}, {maxsale[X_dropdown][0]}'    
+        f'Najlepszy wynik: {maxsale[Y_dropdown][0]}, {maxsale[X_dropdown][0]}'    
     fig.update_layout(
         title_text=title_text
     )
     return fig
 
 
-# map
 @app.callback(
-    Output('voivo-map', 'figure'),
-    [Input('refresh_button', 'n_clicks'),
-     Input('map_type', 'value'),
-     Input('sex', 'value'),
-     Input('phone', 'value'),
-     Input('www', 'value'),
-     Input('email', 'value'),
-     Input('has_licences', 'value'),
-     Input('start_quarter', 'value')],
-    )
+    Output('voivo-map', 'figure'), [Input('refresh_button', 'n_clicks')],
+    state=[
+        State('map_type', 'value'),
+        State('sex', 'value'),
+        State('phone', 'value'),
+        State('www', 'value'),
+        State('email', 'value'),
+        State('has_licences', 'value'),
+        State('start_quarter', 'value'),
+    ]
+)
 def login(n_clicks, map_type, sex, phone, www, email, has_licences, start_quarter):
     filtered = map_maker.all_data
     filtered = filtered[filtered['SexEncoded'].isin(sex)]
@@ -535,5 +545,5 @@ def login(n_clicks, map_type, sex, phone, www, email, has_licences, start_quarte
 
 
 ## run server
-#app.run_server(debug=True, use_reloader=False, port=9000)
-app.run_server(port=9000)
+app.run_server(debug=True, port=9000)
+#app.run_server(port=9000)
